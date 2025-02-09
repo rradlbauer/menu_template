@@ -7,9 +7,13 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    flatDir {
+        dirs '.'
+    }
 }
 
 dependencies {
+    implementation files('menu.jar')
     implementation 'org.hibernate:hibernate-gradle-plugin:5.4.32.Final'
     implementation 'com.h2database:h2:2.1.210'
     implementation 'org.xerial:sqlite-jdbc:3.36.0.2'
